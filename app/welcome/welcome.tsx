@@ -1,7 +1,12 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
+
 export function Welcome() {
+
+  const apiKey = import.meta.env.VITE_MY_SECRET_API_KEY
+  const possword = import.meta.env.VITE_PASSWORD
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -24,6 +29,8 @@ export function Welcome() {
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
               What&apos;s next?
             </p>
+            <h1>{apiKey}</h1>
+            <h2>{possword}</h2>
             <ul>
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
