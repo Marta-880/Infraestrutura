@@ -31,6 +31,7 @@ export function Welcome() {
             </p>
             <h1>{apiKey}</h1>
             <h2>{possword}</h2>
+            <h3>foda-se</h3>
             <ul>
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
